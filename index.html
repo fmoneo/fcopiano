@@ -153,7 +153,7 @@
         let currentSong = null;
         let transposeAmount = 0;
         let activeLanguage = 'All';
-        const notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
+        const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
         // Chord to semitones map (Relative to root 0)
         const chordFormulas = {
@@ -237,19 +237,23 @@
         }
 
         function getShiftedChord(original) {
-            return original.replace(/([A-G][b#]?)(.*)/, (match, root, suffix) => {
-                let idx = notes.indexOf(root);
-                // Simple flat/sharp normalization
+            // This regex looks for the Note (A-G) and the accidental (# or b) together
+            return original.replace(/([A-G][b#]?)/g, (match) => {
+                let idx = notes.indexOf(match);
+
+                // Standardize flats to sharps for the lookup table
                 if (idx === -1) {
-                    if (root === 'Bb') idx = 10;
-                    if (root === 'Eb') idx = 3;
-                    if (root === 'Ab') idx = 8;
-                    if (root === 'Db') idx = 1;
-                    if (root === 'Gb') idx = 6;
+                    const flatMap = { 'Bb': 10, 'Eb': 3, 'Ab': 8, 'Db': 1, 'Gb': 6 };
+                    idx = flatMap[match] || -1;
                 }
+
+                if (idx === -1) return match; // Return as-is if not found
+
+                // Apply transposition
                 let newIdx = (idx + transposeAmount) % 12;
                 while (newIdx < 0) newIdx += 12;
-                return notes[newIdx] + suffix;
+                
+                return notes[newIdx];
             });
         }
 

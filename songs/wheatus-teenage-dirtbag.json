@@ -9,18 +9,19 @@
     {
       "type": "Verse 1",
       "lines": [
-        { "lyrics": "Her [E]name is No[B]elle [E] [A]" },
-        { "lyrics": "[E]I have a [B]dream a[E]bout [A]her" },
-        { "lyrics": "[E]She rings my [B]bell [E] [A]" },
-        { "lyrics": "[E]I got gym [B]class in [E]half an [A]hour" },
-        { "lyrics": "[E]Oh how she [B]rocks [E]in Keds and [A]tube socks" }
+        { "lyrics": "Her [E]name is No[B]elle" },
+        { "lyrics": "[E]I have a dream[A] about her" },
+        { "lyrics": "[E]She rings my [B]bell" },
+        { "lyrics": "I got [E]gym class in [A]half an hour" },
+        { "lyrics": "[E]Oh how she [B]rocks"},
+        { "lyrics": "in [E]Keds and tube [A]socks" }
       ]
     },
     {
       "type": "Pre-Chorus",
       "lines": [
         { "lyrics": "But [C#m]she doesn't [A]know who I [B]am" },
-        { "lyrics": "And [C#m]she doesn't [A]give a damn a[B]bout me" }
+        { "lyrics": "And [C#m]she doesn't [A]give a [B]damn about me" }
       ]
     },
     {
@@ -28,16 +29,24 @@
       "lines": [
         { "lyrics": "'Cause [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
         { "lyrics": "Yeah [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
-        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]ba[G#m]by, [E]with [A]me [B]" }
+        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]baby, [G#m]with [E]me [A][B][C#m][G#m][A][B]" }
+      ]
+    },
+    {
+      "type": "Instrumental",
+      "lines": [
+        { "lyrics": "[E][B][E][A][E][B][E][A]" }
       ]
     },
     {
       "type": "Verse 2",
       "lines": [
-        { "lyrics": "Her [E]boyfriend's a [B]dick [E] [A]" },
-        { "lyrics": "[E]And he brings a [B]gun to [E]school [A]" },
-        { "lyrics": "[E]And he'd simply [B]kick [E]my [A]ass if he knew the truth" },
-        { "lyrics": "[E]He lives on my [B]block [E]and he drives an [A]IROC" }
+        { "lyrics": "Her [E]boyfriend's a [B]dick" },
+        { "lyrics": "[E]And he brings a [A]gun to school" },
+        { "lyrics": "[E]And he'd simply [B]kick"},
+        { "lyrics": "my [E]ass if he knew[A] the truth" },
+        { "lyrics": "[E]He lives on my [B]block" },
+        { "lyrics": "[E]and he drives an[A] IROC" }
       ]
     },
     {
@@ -48,22 +57,37 @@
       ]
     },
     {
+      "type": "Chorus",
+      "lines": [
+        { "lyrics": "'Cause [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
+        { "lyrics": "Yeah [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
+        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]baby, [G#m]with [E]me [A][B][C#m][G#m][A][B]" }
+      ]
+    },
+    {
       "type": "Bridge",
       "lines": [
-        { "lyrics": "[E]Oh, [A]yeah, [B]dirtbag" },
-        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B]" },
-        { "lyrics": "[E]Oh, [A]yeah, [B]dirtbag" },
-        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B]" }
+        { "lyrics": "[E]Oh, [A]yeah, [E]dirtbag" },
+        { "lyrics": "No, [C#m]she [G#m]doesn't know [A]what she's [B]missing" },
+        { "lyrics": "[E]Oh, [A]yeah, [E]dirtbag" },
+        { "lyrics": "No, [C#m]she [G#m]doesn't know [A]what she's [B]missing" }
+      ]
+    },
+    {
+      "type": "Instrumental",
+      "lines": [
+        { "lyrics": "[E][B][E][A]" }
       ]
     },
     {
       "type": "Verse 3",
       "lines": [
-        { "lyrics": "[E]Man, I [B]feel like [E]mold [A]" },
-        { "lyrics": "[E]It's prom [B]night and [E]I am [A]lonely" },
-        { "lyrics": "[E]Lo and [B]behold [E] [A]" },
-        { "lyrics": "[E]She's walking [B]over [E]to [A]me" },
-        { "lyrics": "[E]This must be [B]fake [E]my lip starts to [A]shake" }
+        { "lyrics": "[E]Man, I feel like[B] mold" },
+        { "lyrics": "[E]It's prom night [A]and I am lonely" },
+        { "lyrics": "[E]Lo and behold[B]" },
+        { "lyrics": "[E]She's walking [A]over to me" },
+        { "lyrics": "[E]This must be [B]fake"},
+        { "lyrics": "my [E]lip starts to [A]shake" }
       ]
     },
     {
@@ -78,14 +102,23 @@
       "lines": [
         { "lyrics": "[E]I've got two [A]tickets to [B]Iron [C#m]Maiden, [G#m]baby" },
         { "lyrics": "[E]Come with me [A]Friday, [B]don't say [C#m]may[G#m]be" },
-        { "lyrics": "[E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by, like [A]you [B]" }
+        { "lyrics": "[E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by, like [E]you [A]" },
+        { "lyrics": "[B][C#m][G#m][A][B]"}
+      ]
+    },
+    {
+      "type": "Bridge",
+      "lines": [
+        { "lyrics": "[E]Oh, [A]yeah, [E]dirtbag" },
+        { "lyrics": "No, [C#m]she [G#m]doesn't know [A]what she's [B]missing" },
+        { "lyrics": "[E]Oh, [A]yeah, [E]dirtbag" },
+        { "lyrics": "No, [C#m]she [G#m]doesn't know [A]what she's[B] [E]mis-[B]sing" }
       ]
     },
     {
       "type": "Outro",
       "lines": [
-        { "lyrics": "[E]Ooh, [A]yeah, [B]dirtbag" },
-        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B] [E]" }
+        { "lyrics": "[E][A][E][B][E][A][G#m][F#m][E]" }
       ]
     }
   ]
