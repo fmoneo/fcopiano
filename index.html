@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Songbook - Stage Mode</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@500&display=swap');
+        
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Chord Rendering */
+        .chord {
+            font-family: 'Roboto Mono', monospace;
+            color: #00f2ff;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: -1.2rem;
+            background: rgba(18,18,18,0.7);
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+
+        .chord:hover { text-decoration: underline; color: #fff; }
+
+        .lyric-line {
+            position: relative;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        /* Piano Styles */
+        .white-key { fill: #f0f0f0; stroke: #333; stroke-width: 0.5; }
+        .black-key { fill: #222; stroke: #000; }
+        .key-active { fill: #00f2ff !important; }
+
+        .sticky-controls {
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333;
+        }
+
+        /* Hide scrollbars but keep functionality */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body class="p-4 pb-48">
+
+    <div id="search-screen" class="max-w-2xl mx-auto pt-8">
+        <h1 class="text-4xl font-bold mb-8 text-center text-cyan-400">Piano Songbook</h1>
+        
+        <input type="text" id="searchInput" placeholder="Search song or artist..." 
+            class="w-full p-4 rounded-xl bg-zinc-800 border border-zinc-700 mb-6 focus:outline-none focus:border-cyan-500 text-lg">
+        
+        <div class="flex gap-2 mb-8 overflow-x-auto pb-2">
+            <button onclick="setFilter('All')" class="bg-zinc-700 px-6 py-2 rounded-full whitespace-nowrap active:bg-cyan-600">All</button>
+            <button onclick="setFilter('English')" class="bg-zinc-700 px-6 py-2 rounded-full whitespace-nowrap active:bg-cyan-600">English</button>
+            <button onclick="setFilter('Spanish')" class="bg-zinc-700 px-6 py-2 rounded-full whitespace-nowrap active:bg-cyan-600">Español</button>
+        </div>
+
+        <div id="songList" class="space-y-3">
+            <div class="text-center text-zinc-500 animate-pulse">Connecting to GitHub...</div>
+        </div>
+    </div>
+
+    <div id="song-view" class="hidden max-w-3xl mx-auto">
+        <div class="sticky-controls sticky top-0 py-4 z-20 flex items-center justify-between gap-2">
+            <button onclick="showSearch()" class="p-2 text-zinc-400 hover:text-white">← Library</button>
+            
+            <div class="flex items-center gap-4 bg-zinc-900 px-4 py-1 rounded-full border border-zinc-700">
+                <button onclick="transpose(-1)" class="text-2xl font-mono text-zinc-400 hover:text-cyan-400">−</button>
+                <div class="text-center">
+                    <div class="text-[10px] uppercase text-zinc-500 leading-none">Key</div>
+                    <span id="transposeVal" class="font-bold text-cyan-400">0</span>
+                </div>
+                <button onclick="transpose(1)" class="text-2xl font-mono text-zinc-400 hover:text-cyan-400">+</button>
+            </div>
+
+            <button onclick="toggleVideo()" id="videoBtn" class="bg-red-900/20 text-red-500 px-4 py-2 rounded-lg border border-red-900/30 font-bold text-sm">VIDEO</button>
+        </div>
+
+        <div id="youtubeContainer" class="hidden mt-4 aspect-video rounded-xl overflow-hidden shadow-2xl"></div>
+
+        <header class="mt-8 mb-12">
+            <h2 id="songTitle" class="text-4xl font-bold text-white"></h2>
+            <p id="songArtist" class="text-cyan-500 text-xl"></p>
+        </header>
+
+        <div id="lyricsArea" class="text-xl md:text-2xl mb-20"></div>
+    </div>
+
+    <div id="visualizer" class="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-lg p-4 border-t border-zinc-800 hidden z-30">
+        <div class="max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-3 px-2">
+                <span id="chordNameDisplay" class="font-bold text-cyan-400 text-xl uppercase tracking-widest">Select a chord</span>
+                <button onclick="closeVisualizer()" class="text-zinc-500 text-xs">CLOSE [X]</button>
+            </div>
+            <svg id="piano-svg" viewBox="0 0 280 80" class="w-full h-auto drop-shadow-lg"></svg>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. CONFIGURATION ---
+        const REPO_CONFIG = {
+            owner: 'YOUR_GITHUB_USERNAME', // Change this
+            repo: 'YOUR_REPO_NAME',       // Change this
+            path: 'songs', 
+            branch: 'main'
+        };
+
+        // --- 2. STATE ---
+        let songs = [];
+        let currentSong = null;
+        let transposeAmount = 0;
+        let activeLanguage = 'All';
+        const notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
+
+        // Chord to semitones map (Relative to root 0)
+        const chordFormulas = {
+            '': [0, 4, 7],         // Major
+            'm': [0, 3, 7],        // Minor
+            '7': [0, 4, 7, 10],    // Dominant 7
+            'maj7': [0, 4, 7, 11], // Major 7
+            'm7': [0, 3, 7, 10],   // Minor 7
+            'sus4': [0, 5, 7],
+            'dim': [0, 3, 6]
+        };
+
+        // --- 3. GITHUB DATA LOADING ---
+        async function fetchLibrary() {
+            const listEl = document.getElementById('songList');
+            try {
+                const url = `https://api.github.com/repos/${REPO_CONFIG.owner}/${REPO_CONFIG.repo}/contents/${REPO_CONFIG.path}?ref=${REPO_CONFIG.branch}`;
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Repo not found');
+                const files = await response.json();
+                
+                const jsonFiles = files.filter(f => f.name.endsWith('.json'));
+                const loads = jsonFiles.map(f => fetch(f.download_url).then(res => res.json()));
+                
+                songs = await Promise.all(loads);
+                renderList();
+            } catch (err) {
+                listEl.innerHTML = `<div class="text-red-500 p-4 bg-red-900/10 rounded">Error: Ensure your GitHub Username/Repo are correct in the code.</div>`;
+            }
+        }
+
+        // --- 4. NAVIGATION & UI ---
+        function renderList(search = '') {
+            const list = document.getElementById('songList');
+            list.innerHTML = '';
+
+            const filtered = songs.filter(s => {
+                const matchesSearch = s.title.toLowerCase().includes(search.toLowerCase()) || s.artist.toLowerCase().includes(search.toLowerCase());
+                const matchesLang = activeLanguage === 'All' || s.language === activeLanguage;
+                return matchesSearch && matchesLang;
+            });
+
+            filtered.sort((a,b) => a.title.localeCompare(b.title)).forEach(song => {
+                const div = document.createElement('div');
+                div.className = 'p-5 bg-zinc-800/50 rounded-xl cursor-pointer hover:bg-zinc-700 transition flex justify-between items-center border border-zinc-700/50';
+                div.innerHTML = `
+                    <div>
+                        <div class="font-bold text-lg text-white">${song.title}</div>
+                        <div class="text-sm text-zinc-400">${song.artist}</div>
+                    </div>
+                    <div class="text-[10px] font-bold bg-zinc-700 px-2 py-1 rounded text-zinc-400 uppercase tracking-tighter">${song.language}</div>
+                `;
+                div.onclick = () => loadSong(song);
+                list.appendChild(div);
+            });
+        }
+
+        function loadSong(song) {
+            currentSong = song;
+            transposeAmount = 0;
+            document.getElementById('transposeVal').innerText = "0";
+            document.getElementById('search-screen').classList.add('hidden');
+            document.getElementById('song-view').classList.remove('hidden');
+            window.scrollTo(0,0);
+            renderSong();
+        }
+
+        function showSearch() {
+            document.getElementById('search-screen').classList.remove('hidden');
+            document.getElementById('song-view').classList.add('hidden');
+            document.getElementById('visualizer').classList.add('hidden');
+            document.getElementById('youtubeContainer').classList.add('hidden');
+            document.getElementById('youtubeContainer').innerHTML = '';
+        }
+
+        // --- 5. MUSIC LOGIC ---
+        function transpose(dir) {
+            transposeAmount += dir;
+            document.getElementById('transposeVal').innerText = (transposeAmount > 0 ? '+' : '') + transposeAmount;
+            renderSong();
+        }
+
+        function getShiftedChord(original) {
+            return original.replace(/([A-G][b#]?)(.*)/, (match, root, suffix) => {
+                let idx = notes.indexOf(root);
+                // Simple flat/sharp normalization
+                if (idx === -1) {
+                    if (root === 'Bb') idx = 10;
+                    if (root === 'Eb') idx = 3;
+                    if (root === 'Ab') idx = 8;
+                    if (root === 'Db') idx = 1;
+                    if (root === 'Gb') idx = 6;
+                }
+                let newIdx = (idx + transposeAmount) % 12;
+                while (newIdx < 0) newIdx += 12;
+                return notes[newIdx] + suffix;
+            });
+        }
+
+        function renderSong() {
+            document.getElementById('songTitle').innerText = currentSong.title;
+            document.getElementById('songArtist').innerText = currentSong.artist;
+            const area = document.getElementById('lyricsArea');
+            area.innerHTML = '';
+
+            currentSong.content.forEach(section => {
+                const secLabel = document.createElement('div');
+                secLabel.className = 'text-zinc-500 uppercase text-xs font-bold tracking-widest mt-12 mb-4 border-l-2 border-cyan-500 pl-3';
+                secLabel.innerText = section.type;
+                area.appendChild(secLabel);
+
+                section.lines.forEach(line => {
+                    const lineDiv = document.createElement('div');
+                    lineDiv.className = 'lyric-line';
+                    
+                    // Parse [Chord] and turn into spans
+                    const html = line.lyrics.replace(/\[(.*?)\]/g, (match, p1) => {
+                        const shifted = getShiftedChord(p1);
+                        return `<span class="chord" onclick="showOnPiano('${shifted}')">${shifted}</span>`;
+                    });
+                    
+                    lineDiv.innerHTML = html;
+                    area.appendChild(lineDiv);
+                });
+            });
+        }
+
+        // --- 6. PIANO VISUALIZER ---
+        function createPiano() {
+            const svg = document.getElementById('piano-svg');
+            let html = '';
+            // 14 White keys (2 octaves)
+            for (let i = 0; i < 14; i++) {
+                html += `<rect id="white-${i}" class="white-key" x="${i * 20}" y="0" width="20" height="80" />`;
+            }
+            // Black keys
+            const blackKeyPositions = [1, 2, 4, 5, 6, 8, 9, 11, 12, 13];
+            blackKeyPositions.forEach((pos, index) => {
+                html += `<rect id="black-${pos}" class="black-key" x="${pos * 20 - 7}" y="0" width="14" height="50" />`;
+            });
+            svg.innerHTML = html;
+        }
+
+        function showOnPiano(chordStr) {
+            document.getElementById('visualizer').classList.remove('hidden');
+            document.getElementById('chordNameDisplay').innerText = chordStr;
+            
+            // Reset keys
+            document.querySelectorAll('.white-key, .black-key').forEach(k => k.classList.remove('key-active'));
+
+            // Parse Chord
+            const match = chordStr.match(/([A-G][b#]?)(.*)/);
+            if (!match) return;
+            const root = match[1];
+            const suffix = match[2] || '';
+            
+            let rootIdx = notes.indexOf(root);
+            if (rootIdx === -1) { /* handle flats if needed */ }
+            
+            const formula = chordFormulas[suffix] || chordFormulas['']; // Default to major if suffix unknown
+            
+            formula.forEach(interval => {
+                const noteIdx = (rootIdx + interval) % 12;
+                // Map semitone (0-11) to SVG ID
+                const map = {
+                    0: 'white-0', 1: 'black-1', 2: 'white-1', 3: 'black-2', 4: 'white-2',
+                    5: 'white-3', 6: 'black-4', 7: 'white-4', 8: 'black-5', 9: 'white-5',
+                    10: 'black-6', 11: 'white-6'
+                };
+                const keyId = map[noteIdx];
+                if (keyId) document.getElementById(keyId).classList.add('key-active');
+            });
+        }
+
+        function closeVisualizer() {
+            document.getElementById('visualizer').classList.add('hidden');
+        }
+
+        function toggleVideo() {
+            const container = document.getElementById('youtubeContainer');
+            if (container.classList.contains('hidden')) {
+                container.innerHTML = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${currentSong.youtubeId}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+                container.classList.remove('hidden');
+            } else {
+                container.classList.add('hidden');
+                container.innerHTML = '';
+            }
+        }
+
+        function setFilter(lang) {
+            activeLanguage = lang;
+            renderList(document.getElementById('searchInput').value);
+        }
+
+        // --- INIT ---
+        createPiano();
+        fetchLibrary();
+        document.getElementById('searchInput').oninput = (e) => renderList(e.target.value);
+    </script>
+</body>
+</html>

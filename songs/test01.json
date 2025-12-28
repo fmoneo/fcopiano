@@ -1,0 +1,34 @@
+{
+  "id": "bon-jovi-always-001",
+  "title": "Always",
+  "artist": "Bon Jovi",
+  "language": "English",
+  "originalKey": "E",
+  "youtubeId": "9BMwcO6_hyA",
+  "content": [
+    {
+      "type": "Chorus",
+      "lines": [
+        { "lyrics": "Yeah, I will [E]love you, [B]baby [A]" },
+        { "lyrics": "[C#m]Al - [B]ways" },
+        { "lyrics": "And I'll [E]be there for[B]ever and a [A]day" },
+        { "lyrics": "[C#m]Al - [B]ways" },
+        { "lyrics": "[E]I'll be there till the stars don't shine" },
+        { "lyrics": "till the [B]heavens burst and the words don't rhyme" },
+        { "lyrics": "I know [A]when I die, you'll be on my mind" },
+        { "lyrics": "and I'll [B]love you" },
+        { "lyrics": "[A]Al[B] - [E]ways" }
+      ]
+    },
+    {
+      "type": "Outro/Solo",
+      "lines": [
+        { "lyrics": "([E])  [B]" },
+        { "lyrics": "[C#m]  [B]  [A]" },
+        { "lyrics": "Always" },
+        { "lyrics": "[E]  [B]" },
+        { "lyrics": "[C#m] [B] [A]" }
+      ]
+    }
+  ]
+}
