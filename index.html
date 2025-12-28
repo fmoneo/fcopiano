@@ -15,33 +15,63 @@
             overflow-x: hidden;
         }
 
-        /* Chord Rendering */
+        /* Updated Chord Box Style with Stable Hover */
         .chord {
             font-family: 'Roboto Mono', monospace;
-            color: #00f2ff;
+            color: #ffffff;
+            background-color: #7e22ce;
             font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 6px;
             cursor: pointer;
-            position: absolute;
-            top: -1.2rem;
-            background: rgba(18,18,18,0.7);
-            padding: 0 2px;
-            border-radius: 3px;
+            display: inline-flex; 
+            align-items: center;
+            justify-content: center;
+            
+            /* We define the base lift here */
+            transform: translateY(-1.4rem); 
+            margin-right: 6px;
+            
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            height: 1.6rem;
+            white-space: nowrap;
+            transition: transform 0.1s ease, background-color 0.1s ease;
         }
 
-        .chord:hover { text-decoration: underline; color: #fff; }
+        .chord:hover {
+            background-color: #9333ea;
+            /* We MUST include the translateY here too, so it stays lifted while scaling */
+            transform: translateY(-1.4rem) scale(1.1);
+        }
+
+        .chord.minor-chord {
+            background-color: #4c1d95;
+            border: 1px solid #a78bfa;
+        }
+
+        /* Ensure the hover state also works for minor chords */
+        .chord.minor-chord:hover {
+            background-color: #5b21b6;
+            transform: translateY(-1.4rem) scale(1.1);
+        }
 
         .lyric-line {
-            position: relative;
-            margin-top: 2rem;
-            margin-bottom: 0.8rem;
-            white-space: pre-wrap;
-            line-height: 1.5;
+            display: block;
+            margin-top: 1.5rem; 
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        /* Makes empty lyrics less distracting */
+        .lyric-line:empty {
+            display: none;
         }
 
         /* Piano Styles */
         .white-key { fill: #f0f0f0; stroke: #333; stroke-width: 0.5; }
         .black-key { fill: #222; stroke: #000; }
-        .key-active { fill: #00f2ff !important; }
+        .key-active { fill: #a855f7 !important; }
 
         .sticky-controls {
             background: rgba(18, 18, 18, 0.95);
@@ -112,8 +142,8 @@
     <script>
         // --- 1. CONFIGURATION ---
         const REPO_CONFIG = {
-            owner: 'YOUR_GITHUB_USERNAME', // Change this
-            repo: 'YOUR_REPO_NAME',       // Change this
+            owner: 'fmoneo', // Change this
+            repo: 'fcopiano',       // Change this
             path: 'songs', 
             branch: 'main'
         };
@@ -240,12 +270,21 @@
                     lineDiv.className = 'lyric-line';
                     
                     // Parse [Chord] and turn into spans
+                    // const html = line.lyrics.replace(/\[(.*?)\]/g, (match, p1) => {
+                    //     const shifted = getShiftedChord(p1);
+                    //     return `<span class="chord" onclick="showOnPiano('${shifted}')">${shifted}</span>`;
+                    // });
                     const html = line.lyrics.replace(/\[(.*?)\]/g, (match, p1) => {
                         const shifted = getShiftedChord(p1);
-                        return `<span class="chord" onclick="showOnPiano('${shifted}')">${shifted}</span>`;
+                        
+                        // Check if it's a minor chord (contains 'm' but not 'maj')
+                        const isMinor = shifted.includes('m') && !shifted.includes('maj');
+                        const minorClass = isMinor ? 'minor-chord' : '';
+                        
+                        return `<span class="chord ${minorClass}" onclick="showOnPiano('${shifted}')">${shifted}</span>`;
                     });
                     
-                    lineDiv.innerHTML = html;
+                    lineDiv.innerHTML = html || "&nbsp;";
                     area.appendChild(lineDiv);
                 });
             });

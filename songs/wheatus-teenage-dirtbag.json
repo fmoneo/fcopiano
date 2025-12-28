@@ -1,0 +1,92 @@
+{
+  "id": "wheatus-teenage-dirtbag-001",
+  "title": "Teenage Dirtbag",
+  "artist": "Wheatus",
+  "language": "English",
+  "originalKey": "E",
+  "youtubeId": "BR2JtsVumwg",
+  "content": [
+    {
+      "type": "Verse 1",
+      "lines": [
+        { "lyrics": "Her [E]name is No[B]elle [E] [A]" },
+        { "lyrics": "[E]I have a [B]dream a[E]bout [A]her" },
+        { "lyrics": "[E]She rings my [B]bell [E] [A]" },
+        { "lyrics": "[E]I got gym [B]class in [E]half an [A]hour" },
+        { "lyrics": "[E]Oh how she [B]rocks [E]in Keds and [A]tube socks" }
+      ]
+    },
+    {
+      "type": "Pre-Chorus",
+      "lines": [
+        { "lyrics": "But [C#m]she doesn't [A]know who I [B]am" },
+        { "lyrics": "And [C#m]she doesn't [A]give a damn a[B]bout me" }
+      ]
+    },
+    {
+      "type": "Chorus",
+      "lines": [
+        { "lyrics": "'Cause [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
+        { "lyrics": "Yeah [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
+        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]ba[G#m]by, [E]with [A]me [B]" }
+      ]
+    },
+    {
+      "type": "Verse 2",
+      "lines": [
+        { "lyrics": "Her [E]boyfriend's a [B]dick [E] [A]" },
+        { "lyrics": "[E]And he brings a [B]gun to [E]school [A]" },
+        { "lyrics": "[E]And he'd simply [B]kick [E]my [A]ass if he knew the truth" },
+        { "lyrics": "[E]He lives on my [B]block [E]and he drives an [A]IROC" }
+      ]
+    },
+    {
+      "type": "Pre-Chorus",
+      "lines": [
+        { "lyrics": "But [C#m]he doesn't [A]know who I [B]am" },
+        { "lyrics": "And [C#m]he doesn't [A]give a damn a[B]bout me" }
+      ]
+    },
+    {
+      "type": "Bridge",
+      "lines": [
+        { "lyrics": "[E]Oh, [A]yeah, [B]dirtbag" },
+        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B]" },
+        { "lyrics": "[E]Oh, [A]yeah, [B]dirtbag" },
+        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B]" }
+      ]
+    },
+    {
+      "type": "Verse 3",
+      "lines": [
+        { "lyrics": "[E]Man, I [B]feel like [E]mold [A]" },
+        { "lyrics": "[E]It's prom [B]night and [E]I am [A]lonely" },
+        { "lyrics": "[E]Lo and [B]behold [E] [A]" },
+        { "lyrics": "[E]She's walking [B]over [E]to [A]me" },
+        { "lyrics": "[E]This must be [B]fake [E]my lip starts to [A]shake" }
+      ]
+    },
+    {
+      "type": "Pre-Chorus",
+      "lines": [
+        { "lyrics": "[C#m]How does she [A]know who I [B]am?" },
+        { "lyrics": "And [C#m]why does she [A]give a damn a[B]bout me?" }
+      ]
+    },
+    {
+      "type": "Final Chorus",
+      "lines": [
+        { "lyrics": "[E]I've got two [A]tickets to [B]Iron [C#m]Maiden, [G#m]baby" },
+        { "lyrics": "[E]Come with me [A]Friday, [B]don't say [C#m]may[G#m]be" },
+        { "lyrics": "[E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by, like [A]you [B]" }
+      ]
+    },
+    {
+      "type": "Outro",
+      "lines": [
+        { "lyrics": "[E]Ooh, [A]yeah, [B]dirtbag" },
+        { "lyrics": "[E]No, [A]she doesn't [B]know what she's [C#m]miss[G#m]ing [A] [B] [E]" }
+      ]
+    }
+  ]
+}
