@@ -1,0 +1,85 @@
+{
+  "id": "alejandro-fernandez-si-tu-supieras-002",
+  "title": "Si tú supieras",
+  "artist": "Alejandro Fernández",
+  "language": "Spanish",
+  "originalKey": "A",
+  "youtubeId": "ElF_NuB3LHc",
+  "content": [
+    {
+      "type": "Verso A",
+      "lines": [
+        { "lyrics": "Si tú [A]supieras," },
+        { "lyrics": "que tu recuerdo me acaricia como el [Bm]viento" },
+        { "lyrics": "que el [C#]corazón se me ha quedado sin pa[F#m]labras" },
+        { "lyrics": "para de[B]cirte que es tan grande [Bm]lo que siento.[E]" }
+      ]
+    },
+    {
+      "type": "Verso B",
+      "lines": [
+        { "lyrics": "Si tú [A]supieras," },
+        { "lyrics": "cómo te ansia cada espacio de mi [Bm]cuerpo" },
+        { "lyrics": "cómo [C#]palpitan tus recuerdos en el [F#m]alma" },
+        { "lyrics": "cuando se [B]queda tu presencia aqui en mi [E]pecho." }
+      ]
+    },
+    {
+      "type": "Coro A",
+      "lines": [
+        { "lyrics": "[A]Ven, entrégame[E] tu amor" },
+        { "lyrics": "para cal[Bm]mar este dolor de no te[C#7]nerte" },
+        { "lyrics": "para bo[F#m]rrar con tus caricias mis la[B]mentos" },
+        { "lyrics": "para sem[Bm]brar mil rosas nuevas en tu [E]vientre." }
+      ]
+    },
+    {
+      "type": "Coro A",
+      "lines": [    
+        { "lyrics": "[A]Ven, entrégame[E] tu amor" },
+        { "lyrics": "que está mi [Bm]vida en cada beso para [C#7]darte" },
+        { "lyrics": "y que se [F#m]pierda en el pasado este tor[B]mento" },
+        { "lyrics": "que no me [Bm]basta el mundo en[E]tero para a[A]marte." }
+      ]
+    },
+    {
+      "type": "Verso A (Var)",
+      "lines": [
+        { "lyrics": "Si tú [A]supieras," },
+        { "lyrics": "que es como un grito" },
+        { "lyrics": "que se es[Bm]trella en el silencio" },
+        { "lyrics": "este va[C#]cío de tenerte sólo en [F#m]sueños" },
+        { "lyrics": "mientras me [B]calma el corazón por [E]ser tu dueño." }
+      ]
+    },
+    {
+      "type": "Verso B (Var)",
+      "lines": [
+        { "lyrics": "Si tú [A]supieras," },
+        { "lyrics": "cómo de[Bm]sangran en tus ojos mis anhelos" },
+        { "lyrics": "cuando me [C#]miran sin saber que estoy mu[F#m]riendo" },
+        { "lyrics": "por entre[B]garte la pasión que [E]llevo dentro." }
+      ]
+    },
+    {
+      "type": "Coro C (Final)",
+      "lines": [
+        { "lyrics": "[A]Ven, en[E]trégame tu amor" },
+        { "lyrics": "que sin me[Bm]dida estoy dispuesto a ena[C#]morarte" },
+        { "lyrics": "borra por [F#m]siempre de mi vida" },
+        { "lyrics": "todas las [B]lágrimas que habitan" },
+        { "lyrics": "en cada [Bm]noche sin tus besos" },
+        { "lyrics": "en el rin[E]cón de mis lamentos." }
+      ]
+    },
+    {
+      "type": "Coro D (Final)",
+      "lines": [
+        { "lyrics": "[A]Ven, en[E]trégame tu amor" },
+        { "lyrics": "que está mi [Bm]vida en cada beso para [C#]darte" },
+        { "lyrics": "y que se [F#m]pierda en el pasado este la[B]mento" },
+        { "lyrics": "que no me [Bm]basta todo el [E]tiempo para a[A]marte." }
+      ]
+    }
+  ]
+}

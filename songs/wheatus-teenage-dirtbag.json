@@ -61,7 +61,8 @@
       "lines": [
         { "lyrics": "'Cause [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
         { "lyrics": "Yeah [E]I'm just a [A]teenage [B]dirtbag, [C#m]ba[G#m]by" },
-        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]baby, [G#m]with [E]me [A][B][C#m][G#m][A][B]" }
+        { "lyrics": "[E]Listen to [A]Iron [B]Maiden, [C#m]baby, [G#m]with [E]me"},
+        { "lyrics": "[A][B][C#m][G#m][A][B]" }
       ]
     },
     {
