@@ -1,0 +1,62 @@
+{
+"title": "Ironic",
+"artist": "Alanis Morissette",
+"youtubeId": "Jne9t8sHpUc",
+"language": "English",
+"content": [
+{
+"type": "VERSE 1",
+"lines": [
+{ "lyrics": "An [F#]old [B]man [F#]turned ni[G#m]nety-eight" },
+{ "lyrics": "He [F#]won the [B]lotter[F#]y and [G#m]died the next day" },
+{ "lyrics": "It's a [F#]black [B]fly [F#]in your [G#m]Chardonnay" },
+{ "lyrics": "It's a [F#]death row [B]pardon [F#]two minutes [G#m]too late" },
+{ "lyrics": "And [F#]isn't it [B]good, [F#]al[G#m]right" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "It's like [B]ra[E]in on your [B]wedding [C#m]day" },
+{ "lyrics": "It's a [B]free [E]ride when you've [B]already [C#m]paid" },
+{ "lyrics": "It's the [B]good ad[E]vice that you [B]just didn't [C#m]take" },
+{ "lyrics": "And [A]who would've [E]thought, it [F#]figures" }
+]
+},
+{
+"type": "VERSE 2",
+"lines": [
+{ "lyrics": "Mr. [F#]Play It [B]Safe was [F#]afraid to [G#m]fly" },
+{ "lyrics": "He [F#]packed his [B]suitcase and [F#]kissed his kids [G#m]goodbye" },
+{ "lyrics": "He [F#]waited his [B]whole damn [F#]life to take that [G#m]flight" },
+{ "lyrics": "And as the [F#]plane crashed [B]down he thought" },
+{ "lyrics": "Well [F#]isn't this [G#m]nice..." },
+{ "lyrics": "And [F#]isn't it [B]good, [F#]al[G#m]right" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "It's like [B]ra[E]in on your [B]wedding [C#m]day" },
+{ "lyrics": "It's a [B]free [E]ride when you've [B]already [C#m]paid" },
+{ "lyrics": "It's the [B]good ad[E]vice that you [B]just didn't [C#m]take" },
+{ "lyrics": "And [A]who would've [E]thought, it [F#]figures" }
+]
+},
+{
+"type": "BRIDGE",
+"lines": [
+{ "lyrics": "[A]Well, life has a [B]funny way of [F#]sneaking up on you" },
+{ "lyrics": "[A]Life has a [B]funny way of [F#]helping you out" },
+{ "lyrics": "[A]Hel[B]ping you [F#]out" }
+]
+},
+{
+"type": "OUTRO",
+"lines": [
+{ "lyrics": "[F#]Life has a [B]funny way of [F#]sneaking [G#m]up on you" },
+{ "lyrics": "[F#]Life has a [B]funny [F#]way... of [G#m]helping you [F#]out" }
+]
+}
+]
+}

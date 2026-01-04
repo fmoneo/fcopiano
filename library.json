@@ -1,0 +1,24 @@
+{
+    "songs": [
+        {
+            "title": "Teenage Dirtbag",
+            "artist": "Wheatus",
+            "file": "songs/Wheatus-TeenageDirtbag.json"
+        },
+        {
+            "title": "Si Tú Supieras",
+            "artist": "Alejandro Fernández",
+            "file": "songs/AlejandroFernandez-SiTuSupieras.json"
+        },
+        {
+            "title": "Always",
+            "artist": "Bon Jovi",
+            "file": "songs/BonJovi-Always.json"
+        },
+        {
+            "title": "Ironic",
+            "artist": "Alanis Morissette",
+            "file": "songs/AlanisMorissette-Ironic.json"
+        }
+    ]
+}
