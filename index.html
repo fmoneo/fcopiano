@@ -14,6 +14,8 @@
             color: #e0e0e0;
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
+            scroll-behavior: smooth;
+            /* Enables smooth sliding animation */
         }
 
         /* The Lyric Line: Holds the word-chord pairs */
@@ -114,7 +116,8 @@
             align-items: center;
             margin-top: 3.5rem;
             margin-bottom: 1.5rem;
-            width: 100%;
+            /*width: 100%;*/
+            scroll-margin-top: 100px;
         }
 
         .section-label {
@@ -134,6 +137,28 @@
             background-color: #164e63;
             /* Thin blue/cyan line */
             opacity: 0.6;
+        }
+
+        /* Add this new class for the Jump button */
+        .scroll-btn {
+            margin-left: auto;
+            /* Pushes the button all the way to the right */
+            background-color: transparent;
+            color: #22d3ee;
+            /* Cyan color */
+            border: 1px solid #164e63;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.65rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .scroll-btn:hover {
+            background-color: #22d3ee;
+            color: #121212;
         }
 
         ::-webkit-scrollbar {
@@ -318,8 +343,18 @@
                 const lineElement = document.createElement('div');
                 lineElement.className = 'section-divider-line';
 
+                // NEW: The Jump Button
+                const scrollBtn = document.createElement('button');
+                scrollBtn.className = 'scroll-btn';
+                scrollBtn.innerText = '↑ ↑ ↑';
+                scrollBtn.onclick = () => {
+                    // This tells the browser to put THIS header at the top of the screen
+                    headerDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                };
+
                 headerDiv.appendChild(label);
                 headerDiv.appendChild(lineElement);
+                headerDiv.appendChild(scrollBtn); // Adds it after the line
                 area.appendChild(headerDiv);
 
                 section.lines.forEach(line => {
@@ -379,7 +414,15 @@
                     });
                     area.appendChild(lineDiv);
                 });
-            });
+            }); // end of currentSong.content.forEach
+
+            // --- NEW: The Scroll Spacer ---
+            // This ensures even the last section can scroll to the top
+            const spacer = document.createElement('div');
+            spacer.style.height = '80vh'; // Adds 80% of screen height as empty space
+            spacer.style.pointerEvents = 'none'; // Makes sure it doesn't interfere with clicks
+            area.appendChild(spacer);
+
         }
 
         function createPiano() {
