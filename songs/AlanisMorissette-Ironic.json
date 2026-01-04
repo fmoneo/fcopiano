@@ -7,82 +7,69 @@
 {
 "type": "VERSE 1",
 "lines": [
-{ "lyrics": "An [D/F#]old [G]man [D/F#]turned ninety-[Em]eight" },
-{ "lyrics": "He won[D/F#] the lottery[G] and [D/F#]died the next [Em]day" },
-{ "lyrics": "It's a[D/F#] black [G]fly in [D/F#]your Chardonnay[Em]" },
-{ "lyrics": "It's a [D/F#]death row [G]pardon two [D/F#]minutes too [Em]late" },
-{ "lyrics": "And isn't it [D/F#]ironic[G] ... don't you [D/F#]think [Em]" }
+{ "lyrics": "An [G/B]old [C]man [G/B]turned ninety-[Am]eight" },
+{ "lyrics": "He won[G/B] the lottery[C] and [G/B]died the next [Am]day" },
+{ "lyrics": "It's a[G/B] black [C]fly in [G/B]your Chardonnay[Am]" },
+{ "lyrics": "It's a [G/B]death row [C]pardon two [G/B]minutes too [Am]late" },
+{ "lyrics": "And isn't it [G/B]ironic[C] ... don't you [G/B]think [Am]" }
 ]
 },
 {
 "type": "CHORUS",
 "lines": [
-{ "lyrics": "It's like ra-[D]aai[G]in on your [D]wedding [Em]day" },
-{ "lyrics": "It's a free [D]ride[G] when you've [D]already [Em]paid" },
-{ "lyrics": "It's the good ad[D]vice[G] that you [D]just didn't [Em]take" },
-{ "lyrics": "And [F]who would've [C]thought, it fi[D]gures" }
+{ "lyrics": "It's like ra-[G]aai[C]in on your [G]wedding [Am]day" },
+{ "lyrics": "It's a free [G]ride[C] when you've [G]already [Am]paid" },
+{ "lyrics": "It's the good ad[G]vice[C] that you [G]just didn't [Am]take" },
+{ "lyrics": "And [F]who would've [C]thought, it [G]figures" }
 ]
 },
 {
 "type": "VERSE 2",
 "lines": [
-{ "lyrics": "Mr. [D/F#]Play It Safe[G] was [D/F#]afraid to fly[Em]" },
-{ "lyrics": "He packed his [D/F#]suit-[G]case and kissed his [D/F#]kids goodbye[Em]" },
-{ "lyrics": "He waited his [D/F#]whole damn [G]life to [D/F#]take that [Em]flight" },
-{ "lyrics": "And as the [D/F#]plane crashed [G]down he thought" },
-{ "lyrics": "Well [D/F#]isn't this nice[Em]..." },
-{ "lyrics": "And isn't it [D/F#]ironic [G]... don't you [D/F#]think [Em]" }
-
-]
-},
-{
-"type": "CHORUS",
-"lines": [
-{ "lyrics": "It's like ra-[D]aai[G]in on your [D]wedding [Em]day" },
-{ "lyrics": "It's a free [D]ride[G] when you've [D]already [Em]paid" },
-{ "lyrics": "It's the good ad[D]vice[G] that you [D]just didn't [Em]take" },
-{ "lyrics": "And [F]who would've [C]thought, it fi[D]gures" }
+{ "lyrics": "Mr. [G/B]Play It [C]Safe was [G/B]afraid to [Am]fly" },
+{ "lyrics": "He [G/B]packed his [C]suitcase and [G/B]kissed his kids [Am]goodbye" },
+{ "lyrics": "He [G/B]waited his [C]whole damn [G/B]life to take that [Am]flight" },
+{ "lyrics": "And as the [G/B]plane crashed [C]down he thought" },
+{ "lyrics": "Well [G/B]isn't this [Am]nice..." },
+{ "lyrics": "And isn't it [G/B]ironic[C] ... don't you [G/B]think [Am]" }
 ]
 },
 {
 "type": "BRIDGE",
 "lines": [
-{ "lyrics": "Well, [Cmaj7]life has a funny way of sneaking up [Gmaj7/D]on you when you think everything's okay" },
-{ "lyrics": "And [Cmaj7]everything's going ri[Gmaj7/D]ght" },
-{ "lyrics": "And [Cmaj7]life has a funny way of helping you [Gmaj7/D]out when you think everything's gone wrong " },
-{ "lyrics": "and [Cmaj7]everything blows up in your fa[Cadd9]ce" }
+{ "lyrics": "Well [Fmaj7]life has a funny way of [Cmaj7/G]sneaking up on you when you think everything's okay" },
+{ "lyrics": "And [Fmaj7]everything's going ri[Cmaj7/G]ght" },
+{ "lyrics": "And [Fmaj7]life has a funny way of helping you [Cmaj7/G]out when you think everything's gone wrong " },
+{ "lyrics": "and [Fmaj7]everything blows up in your fa[Fadd9]ce" }
 ]
 },
 {
 "type": "VERSE 3",
 "lines": [
-{ "lyrics": "A [D/F#]traffic [G]jam when you're [D/F#]already late[Em]" },
-{ "lyrics": "A no-[D/F#]smoking [G]sign on your [D/F#]cigarette [Em]break" },
-{ "lyrics": "It's like [D/F#]ten thousand [G]spoons when all you [D/F#]need is a [Em]knife" },
-{ "lyrics": "It's [D/F#]meeting the man of my [G]dreams" },
-{ "lyrics": "And then [D/F#]meeting his beautiful [Em]wife" },
-
-{ "lyrics": "And isn't it [D/F#]ironic [G]... don't you [D/F#]think[Em]" },
-{ "lyrics": "A little too [D/F#]ironic [G]... and yeah, I [D/F#]really do think[Em] ..." }
+{ "lyrics": "A [G/B]traffic [C]jam when you're [G/B]already late[Am]" },
+{ "lyrics": "A no-[G/B]smoking [C]sign on your [G/B]cigarette [Am]break" },
+{ "lyrics": "It's like [G/B]ten thousand [C]spoons when all you [G/B]need is a [Am]knife" },
+{ "lyrics": "It's [G/B]meeting the man of my [C]dreams" },
+{ "lyrics": "And then [G/B]meeting his beautiful [Am]wife" },
+{ "lyrics": "And isn't it [G/B]ironic [C]... don't you [G/B]think[Am]" },
+{ "lyrics": "A little too [G/B]ironic [C]... and yeah, I [G/B]really do think[Am] ..." }
 ]
 },
 {
 "type": "CHORUS",
 "lines": [
-{ "lyrics": "It's like ra-[D]aai[G]in on your [D]wedding [Em]day" },
-{ "lyrics": "It's a free [D]ride[G] when you've [D]already [Em]paid" },
-{ "lyrics": "It's the good ad[D]vice[G] that you [D]just didn't [Em]take" },
-{ "lyrics": "And [F]who would've [C]thought, it fi[D]gures" }
+{ "lyrics": "It's like ra-[G]aai[C]in on your [G]wedding [Am]day" },
+{ "lyrics": "It's a free [G]ride[C] when you've [G]already [Am]paid" },
+{ "lyrics": "It's the good ad[G]vice[C] that you [G]just didn't [Am]take" },
+{ "lyrics": "And [F]who would've [C]thought, it [G]figures" }
 ]
 },
 {
 "type": "OUTRO",
 "lines": [
-{ "lyrics": "[Cmaj7][Gmaj7/D]"},
-{ "lyrics": "And yeah, [Cmaj7]life has a funny way of sneaking up on [Gmaj7/D]you" },
-{ "lyrics": "And [Cmaj7]life has a funny, funny [Gmaj7/D]way " },
-{ "lyrics": "Of helping you [Cmaj7]out, helping you [Cmaj7]out" }
-
+{ "lyrics": "[Fmaj7]Life has a funny way of [Cmaj7/G]sneaking up on you" },
+{ "lyrics": "[Fmaj7]Life has a funny, [Cmaj7/G]funny way of helping you [G]out" },
+{ "lyrics": "Helping you [G/B]out[C][G/B][Am]" }
 ]
 }
 ]
