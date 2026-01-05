@@ -5,30 +5,135 @@
   "language": "English",
   "originalKey": "E",
   "youtubeId": "9BMwcO6_hyA",
-  "content": [
-    {
-      "type": "Chorus",
-      "lines": [
-        { "lyrics": "Yeah, I will [E]love you, [B]baby [A]" },
-        { "lyrics": "[C#m]Al - [B]ways" },
-        { "lyrics": "And I'll [E]be there for[B]ever and a [A]day" },
-        { "lyrics": "[C#m]Al - [B]ways" },
-        { "lyrics": "[E]I'll be there till the stars don't shine" },
-        { "lyrics": "till the [B]heavens burst and the words don't rhyme" },
-        { "lyrics": "I know [A]when I die, you'll be on my mind" },
-        { "lyrics": "and I'll [B]love you" },
-        { "lyrics": "[A]Al[B] - [E]ways" }
-      ]
-    },
-    {
-      "type": "Outro/Solo",
-      "lines": [
-        { "lyrics": "[E]  [B]" },
-        { "lyrics": "[C#m]  [B]  [A]" },
-        { "lyrics": "Always" },
-        { "lyrics": "[E]  [B]" },
-        { "lyrics": "[C#m] [B] [A]" }
-      ]
-    }
-  ]
+  
+"content": [
+{
+"type": "INTRO",
+"lines": [
+{ "lyrics": "[E] - [A]" },
+{ "lyrics": "[C#m][B] - [A] - [A]" }
+]
+},
+{
+"type": "VERSE 1",
+"lines": [
+{ "lyrics": "[C#m]This Romeo is bleeding"},
+{ "lyrics": "[B]but you can't see his blood" },
+{ "lyrics": "[A]It's nothing but some feelings" },
+{ "lyrics": "that this [G#m]old dog kicked up[B]" },
+
+{ "lyrics": "[C#m]It's been raining since you left me" },
+{ "lyrics": "now I'm [B]drowning in the flood" },
+{ "lyrics": "[A]You see I've always been a fighter" },
+{ "lyrics": "but with[G#m]out you I give [A]up[B]" }
+]
+},
+{
+"type": "PRE-CHORUS 1",
+"lines": [
+{ "lyrics": "[C#m]Now I can't sing a love song" },
+{ "lyrics": " like the [B]way it's meant to be" },
+{ "lyrics": "Well, I [A]guess I'm not that good anymore" },
+{ "lyrics": "but [B]baby that's just [A]me[B]" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "And [E]I will [B]love you, ba[A]by" },
+{ "lyrics": "[C#m]Al-[B]ways" },
+{ "lyrics": "And [E]I'll be there fo[B]rever and a [A]day" },
+{ "lyrics": "[C#m]Al-[B]ways" },
+{ "lyrics": "[E]I'll be there till the stars don't shine" },
+{ "lyrics": "Till the [B]heavens burst and the words don't rhyme" },
+{ "lyrics": "And I know [A]when I die, you'll be on my mind" },
+{ "lyrics": "And I'll [B]love you" },
+{ "lyrics": "[C#m]Al[B]-[C#m]ways" }
+]
+},
+{
+"type": "VERSE 2",
+"lines": [
+{ "lyrics": "Now your [C#m]pictures that you left behind" },
+{ "lyrics": "are just [B]memories of a different life" },
+{ "lyrics": "Some that [A]made us laugh, some that made us cry" },
+{ "lyrics": "One that [G#m]made you have to say good[B]bye" },
+
+{ "lyrics": "What I'd [C#m]give to run my fingers through your hair" },
+{ "lyrics": "To [B]touch your lips, to hold you near" },
+{ "lyrics": "When you [A]say your prayers, try to understand" },
+{ "lyrics": "I've [G#m]made mistakes, I'm [A]just a [B]man" }
+]
+},
+{
+"type": "PRE-CHORUS 2",
+"lines": [
+{ "lyrics": "When he [C#m]holds you close, when he pulls you near" },
+{ "lyrics": "When he [B]says the words you've been needing to hear" },
+{ "lyrics": "I wish [A]I was him with those words were mine" },
+{ "lyrics": "To [B]say to you till the [A]end of [B]time" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "And [E]I will [B]love you, ba[A]by" },
+{ "lyrics": "[C#m]Al-[B]ways" },
+{ "lyrics": "And [E]I'll be there fo[B]rever and a [A]day" },
+{ "lyrics": "[C#m]Al[B]ways" }
+]
+},
+{
+"type": "BRIDGE",
+"lines": [
+{ "lyrics": "[D]If you told me to [G]cry for you" },
+{ "lyrics": "[A]I could" },
+{ "lyrics": "[D]If you told me to [G]die for you[A]" },
+{ "lyrics": "I [Bm]would" },
+{ "lyrics": "Take a [A]look at my [G]face" },
+{ "lyrics": "There's no price I won't [A]pay" },
+{ "lyrics": "to [A]say these words to you" }
+]
+},
+{
+"type": "SOLO",
+"lines": [
+{ "lyrics": "[E] - [B] - [F#m] - [C#m][B]" },
+{ "lyrics": "[E] - [B/F#] - [A] - [A][B]" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "Well, there [A]ain't no luck in these loaded dice" },
+{ "lyrics": "But [B]baby if you give me just one more try" },
+{ "lyrics": "We can [A]pack up our old dreams and our old lives" },
+{ "lyrics": "We'll [B]find a place where the sun still shines" },
+
+{ "lyrics": "And [E]I will [B]love you, ba[A]by" },
+{ "lyrics": "[C#m]Al-[B]ways" },
+{ "lyrics": "And [E]I'll be there fo[B]rever and a [A]day" },
+{ "lyrics": "[C#m]Al-[B]ways" },
+{ "lyrics": "[E]I'll be there till the stars don't shine" },
+{ "lyrics": "Till the [B]heavens burst and the words don't rhyme" },
+{ "lyrics": "And I know [A]when I die, you'll be on my mind" },
+{ "lyrics": "And I'll [B]love you" },
+{ "lyrics": "[A]Al[B]-[E]ways" }
+]
+}
+,
+{
+"type": "OUTRO",
+"lines": [
+{ "lyrics": "[E][B]" },
+{ "lyrics": "Al[C#m]ways[B][A]" },
+{ "lyrics": "[E][B]" },
+{ "lyrics": "[C#m][B][A]" },
+{ "lyrics": "[E][B]" },
+{ "lyrics": "[C#m][B][A]" },
+{ "lyrics": "[E][B]" },
+{ "lyrics": "[C#m][B][A]" }
+]
+}
+]
 }
