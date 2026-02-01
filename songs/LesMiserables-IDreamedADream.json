@@ -1,0 +1,74 @@
+{
+"title": "I Dreamed A Dream",
+"artist": "Les Misérables",
+"youtubeId": "86lczf7Bou8",
+"language": "English",
+"content": [
+{
+"type": "INTRO",
+"lines": [
+{ "lyrics": "[D] [D/C#] [Bm] [Bm/A] [G] [A]" }
+]
+},
+{
+"type": "VERSE 1",
+"lines": [
+{ "lyrics": "[D]I dreamed a [D/C#]dream in time gone [Bm]by [Bm/A]" },
+{ "lyrics": "[G]When hope was [G/F#]high and life worth [Em]living [A]" },
+{ "lyrics": "[D]I dreamed that [D/C#]love would never [Bm7]die [Bm/A]" },
+{ "lyrics": "[G]I dreamed that [G/F#]God would be for[Em7]giving [A]" }
+]
+},
+{
+"type": "VERSE 2",
+"lines": [
+{ "lyrics": "[D]Then I was [D/C#]young and unafraid[Bm] [Bm/A]" },
+{ "lyrics": "[G]And dreams were [G/F#]made and used and [Em]wastedg [A]" },
+{ "lyrics": "[D]There was no [D/C#]ransom to be [Bm7]paid [Bm/A]" },
+{ "lyrics": "[G]No song unsung[G/F#], no wine un[Em7]tasted [A]" }
+]
+},
+{
+"type": "CHORUS",
+"lines": [
+{ "lyrics": "[B]But the tigers come at [Em]night" },
+{ "lyrics": "[B]With their [B7]voices soft as [E]thunder" },
+{ "lyrics": "[A]As they tear your hope a[Dm]part" },
+{ "lyrics": "[A]As they turn your dream to [D]shame [Em/D] [F#m/D] [G/D] [A]" }
+]
+},
+{
+"type": "VERSE 3",
+"lines": [
+{ "lyrics": "[D]He slept a [D/C#]summer by my [Bm]side [Bm/A]" },
+{ "lyrics": "[G]He filled my [G/F#]days with endless [Em]wonder [A]" },
+{ "lyrics": "[D]He took my [D/C#]childhood in his [Bm7]stride [Bm/A]" },
+{ "lyrics": "[G]But he was [Asus]gone when [A]autumn [D]came [A/C#] [Am/C] [B]" }
+]
+},
+{
+"type": "BRIDGE",
+"lines": [
+{ "lyrics": "[E]And still I [E/D#]dream he'll come to [C#m7]me [C#m/B]" },
+{ "lyrics": "[A]That we will [A/G#]live the years to[F#m7]gether [B]" },
+{ "lyrics": "[E]But there are [E/D#]dreams that cannot [C#m7]be [C#m/B]" },
+{ "lyrics": "[A]And there are [A/G#]storms we cannot [F#m7]weather [B] [E] [E/D#]" }
+]
+},
+{
+"type": "OUTRO",
+"lines": [
+{ "lyrics": "[C#m7]I had a [C#m/B]dream my life would [A]be [A/G#]" },
+{ "lyrics": "[F#m7]So different [B]from this hell I'm [E]living" },
+{ "lyrics": "So different [E/D#]now from what it [C#m7]seemed [C#m/B]" },
+{ "lyrics": "[A]Now life has [B]killed the dream I [E]dreamed" }
+]
+},
+{
+"type": "INSTRUMENTAL",
+"lines": [
+{ "lyrics": "[E/D#] [C#m7] [C#m/B] [A] [B] [E]" }
+]
+}
+]
+}

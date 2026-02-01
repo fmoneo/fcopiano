@@ -19,6 +19,12 @@
             "title": "Ironic",
             "artist": "Alanis Morissette",
             "file": "songs/AlanisMorissette-Ironic.json"
+        },
+        {
+            "title": "I Dreamed a Dream",
+            "artist": "Les Misérables",
+            "file": "songs/LesMiserables-IDreamedADream.json"
         }
+        
     ]
 }
