@@ -24,6 +24,11 @@
             "title": "I Dreamed a Dream",
             "artist": "Les Misérables",
             "file": "songs/LesMiserables-IDreamedADream.json"
+        },
+        {
+            "title": "Unchained Melody",
+            "artist": "The Righteous Brothers",
+            "file": "songs/TheRighteousBrothers-UnchainedMelody.json"
         }
         
     ]
