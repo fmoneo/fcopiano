@@ -1,0 +1,127 @@
+{
+    "title": "How Far I'll Go",
+    "artist": "Auli'i Cravalho",
+    "youtubeId": "cPAbM060wGs",
+    "language": "English",
+    "content": [
+        {
+            "type": "VERSE 1",
+            "lines": [
+                {
+                    "lyrics": "[E]I've been staring at the edge of the [F#m]water"
+                },
+                {
+                    "lyrics": "Long as I can [C#m]remember, never really knowing [A]why"
+                },
+                {
+                    "lyrics": "[E]I wish I could be the perfect [F#m]daughter"
+                },
+                {
+                    "lyrics": "But I come back to the [C#m]water, no matter how hard I [A]try"
+                }
+            ]
+        },
+        {
+            "type": "PRE-CHORUS",
+            "lines": [
+                {
+                    "lyrics": "Every [C#m]turn I take, every trail I track"
+                },
+                {
+                    "lyrics": "Every [B/D#]path I make, every road leads back"
+                },
+                {
+                    "lyrics": "To the [E]place I know, where I cannot go"
+                },
+                {
+                    "lyrics": "Where I [Am]long to be"
+                }
+            ]
+        },
+        {
+            "type": "CHORUS",
+            "lines": [
+                {
+                    "lyrics": "See the [E]line where the sky meets the sea? It [B]calls me"
+                },
+                {
+                    "lyrics": "And no one [C#m]knows, how far it [A]goes"
+                },
+                {
+                    "lyrics": "If the [E]wind in my sail on the sea stays [B]behind me"
+                },
+                {
+                    "lyrics": "One day I'll [C#m]know, if I [Am]go there's just no telling how far I'll [E]go"
+                }
+            ]
+        },
+        {
+            "type": "VERSE 2",
+            "lines": [
+                {
+                    "lyrics": "[E]I know everybody on this [F#m]island seems so happy on this [C#m]island"
+                },
+                {
+                    "lyrics": "Everything is by [A]design"
+                },
+                {
+                    "lyrics": "[E]I know everybody on this [F#m]island has a role on this [C#m]island"
+                },
+                {
+                    "lyrics": "So maybe I can roll with [A]mine [E/G#]"
+                }
+            ]
+        },
+        {
+            "type": "PRE-CHORUS",
+            "lines": [
+                {
+                    "lyrics": "I can [C#m]lead with pride, I can make us strong"
+                },
+                {
+                    "lyrics": "I'll be [B/D#]satisfied if I play along"
+                },
+                {
+                    "lyrics": "But the [E]voice inside sings a different song"
+                },
+                {
+                    "lyrics": "What is [Am]wrong with me?"
+                }
+            ]
+        },
+        {
+            "type": "CHORUS",
+            "lines": [
+                {
+                    "lyrics": "See the [E]light as it shines on the sea? It's [B]blinding"
+                },
+                {
+                    "lyrics": "But no one [C#m]knows, how deep it [A]goes"
+                },
+                {
+                    "lyrics": "And it [E]seems like it's calling out to me, so come [B]find me"
+                },
+                {
+                    "lyrics": "And let me [C#m]know, what's [A]beyond that line, will I cross that line?"
+                }
+            ]
+        },
+        {
+            "type": "BRIDGE (TRANSPOSE +1)",
+            "lines": [
+                {
+                    "lyrics": "See the [F]line where the sky meets the sea? It [C]calls me"
+                },
+                {
+                    "lyrics": "And no one [Dm]knows, how far it [A#]goes"
+                },
+                {
+                    "lyrics": "If the [F]wind in my sail on the sea stays [C]behind me"
+                },
+                {
+                    "lyrics": "One day I'll [Dm]know [Dm/C], how far I'll [G#]go [G#/G][Fm][Dm][C]"
+                }
+            ]
+        }
+    ]
+}

@@ -29,7 +29,13 @@
             "title": "Unchained Melody",
             "artist": "The Righteous Brothers",
             "file": "songs/TheRighteousBrothers-UnchainedMelody.json"
+        },
+        {
+            "title": "How Far I'll Go",
+            "artist": "Moana",
+            "file": "songs/Moana-HowFarIllGo.json"
         }
+
         
     ]
 }
