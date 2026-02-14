@@ -1,0 +1,94 @@
+{
+    "title": "Unchained Melody",
+    "artist": "The Righteous Brothers",
+    "youtubeId": "IYj2hex99gY",
+    "language": "English",
+    "content": [
+        {
+            "type": "VERSE 1",
+            "lines": [
+                {
+                    "lyrics": "[C]Oh, my [Am]love, my [F]darling"
+                },
+                {
+                    "lyrics": "I've [G]hungered for your [C]touch"
+                },
+                {
+                    "lyrics": "A [Am]long, lonely [G]time"
+                },
+                {
+                    "lyrics": "And [C]time goes [Am]by so [F]slowly"
+                },
+                {
+                    "lyrics": "And [G]time can do so [C]much"
+                },
+                {
+                    "lyrics": "Are [Am]you still [G]mine?"
+                },
+                {
+                    "lyrics": "I [C]need your [G]love"
+                },
+                {
+                    "lyrics": "I need[Am] your [Em]love"
+                },
+                {
+                    "lyrics": "God [F]speed your [G]love to [C]me[C7]"
+                }
+            ]
+        },
+        {
+            "type": "CHORUS / BRIDGE",
+            "lines": [
+                {
+                    "lyrics": "[F]Lonely rivers [G]flow to the [F]sea, to the [G]sea"
+                },
+                {
+                    "lyrics": "[F]To the open [G]arms of the [C]sea"
+                },
+                {
+                    "lyrics": "[F]Lonely rivers [G]sigh, Wait for [F]me, wait for [G]me"
+                },
+                {
+                    "lyrics": "[F]I'll be coming [G]home, wait for [C]me"
+                }
+            ]
+        },
+        {
+            "type": "VERSE 2",
+            "lines": [
+                {
+                    "lyrics": "[C]Oh, my [Am]love, my [F]darling"
+                },
+                {
+                    "lyrics": "I've [G]hungered, hungered for your [C]love"
+                },
+                {
+                    "lyrics": "A [Am]long, lonely [G]time"
+                },
+                {
+                    "lyrics": "And [C]time goes [Am]by so [F]slowly"
+                },
+                {
+                    "lyrics": "And [G]time can do so [C]much"
+                },
+                {
+                    "lyrics": "Are [Am]you still [G]mine?"
+                }
+            ]
+        },
+        {
+            "type": "OUTRO",
+            "lines": [
+                {
+                    "lyrics": "I [C]need your [G]love"
+                },
+                {
+                    "lyrics": "I [Am]need your [Em]love"
+                },
+                {
+                    "lyrics": "God [F]speed your [G]love to [C]me"
+                }
+            ]
+        }
+    ]
+}
