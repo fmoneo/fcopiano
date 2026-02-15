@@ -9,6 +9,36 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono:wght@500&display=swap');
 
+        /* Define the custom font */
+        @font-face {
+            font-family: 'MoanaFont';
+            src: url('moana.ttf') format('truetype');
+        }
+
+        /* This class will be applied to the lyrics area only for the Moana song */
+        body[data-theme="Moana"] .text-segment {
+            font-family: 'MoanaFont', serif;
+            font-size: 1.45rem;
+            /* Custom fonts often need a size boost */
+            letter-spacing: 0.03em;
+            color: #ccfbf1;
+            /* Bright minty text for contrast */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        /* MOANA THEME: Applied to the body */
+        body[data-theme="Moana"] {
+            background-color: #013237 !important;
+            /* This creates a tiled wave pattern in a darker green */
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 Q 25 25 50 50 T 100 50' fill='none' stroke='%23005b63' stroke-width='3'/%3E%3Cpath d='M0 70 Q 25 45 50 70 T 100 70' fill='none' stroke='%23005b63' stroke-width='2'/%3E%3C/svg%3E") !important;
+            background-attachment: fixed;
+        }
+
+        /* Standard contrast for sticky controls on the theme */
+        body[data-theme="Moana"] .sticky-controls {
+            background: rgba(0, 0, 0, 0.95) !important;
+        }
+
         body {
             background-color: #121212;
             color: #e0e0e0;
@@ -304,6 +334,10 @@
             document.getElementById('visualizer').classList.add('hidden');
             document.getElementById('youtubeContainer').classList.add('hidden');
             document.getElementById('youtubeContainer').innerHTML = '';
+
+            // NEW: Reset the background when leaving a song
+            document.body.removeAttribute('data-theme');
+
         }
 
         function transpose(dir) {
@@ -331,6 +365,13 @@
             document.getElementById('songArtist').innerText = currentSong.artist;
             const area = document.getElementById('lyricsArea');
             area.innerHTML = '';
+
+            // NEW: Check the JSON for a customFont property
+            if (currentSong.theme) {
+                document.body.setAttribute('data-theme', currentSong.theme);
+            } else {
+                document.body.removeAttribute('data-theme');
+            }
 
             currentSong.content.forEach(section => {
                 const headerDiv = document.createElement('div');
